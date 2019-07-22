@@ -1,0 +1,10 @@
+Value Manufacturer ([^,]*)
+Value model (.+)
+Value Serialno (.+)
+Value uuid (.+)
+
+Start
+  ^.*Manufacturer: ${Manufacturer}
+  ^.*Serial Number: ${Serialno}
+  ^.*Product Name: ${model}
+  ^.*UUID: ${uuid} -> Record

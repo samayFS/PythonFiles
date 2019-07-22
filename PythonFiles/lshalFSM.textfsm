@@ -1,0 +1,11 @@
+Value product ([^']*)
+Value vendor ([^']*)
+Value version ([^']*)
+Value serial ([^']*)
+
+
+Start
+  ^.*system.hardware.product = '${product}
+  ^.*system.hardware.serial = '${serial}
+  ^.*system.hardware.vendor = '${vendor}
+  ^.*system.kernel.version = '${version} -> Record

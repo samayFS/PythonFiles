@@ -1,0 +1,15 @@
+Value IpAddr (\d+(\.\d+){3})
+Value Host (\S+)
+Value Fqdm ([a-zA-Z0]\S+)
+Value List Port (\d+/\w+\s+\w+\s+\w+)
+
+
+Start
+  ^\w+ \w+ \w+ \w+ -> Continue.Record
+  ^Nmap scan report for ${IpAddr}.\[host ${Host}\]
+  ^Nmap scan report for ${IpAddr}
+  ^Nmap scan report for ${Fqdm}.*\(${IpAddr}\)
+  ^${Port}
+  ^Host is ${Host}
+
+

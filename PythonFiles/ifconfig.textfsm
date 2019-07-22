@@ -1,0 +1,12 @@
+Value Iface (\S+)
+Value ifxType (\S+)
+Value hwaddr (..:..:..:..:..:..)
+Value ipv4Addr ([\d\.]+)
+Value bcast (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value ipv4 (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value ipv6Addr (\S+)
+
+Start
+  ^${Iface}.*Link encap:${ifxType}.*HWaddr ${hwaddr}
+  ^.*inet addr:${ipv4Addr}.*Bcast:${bcast}.*Mask:${ipv4}
+  ^.*inet6 addrr: ${ipv6Addr} -> Record

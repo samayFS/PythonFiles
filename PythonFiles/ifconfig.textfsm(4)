@@ -1,0 +1,15 @@
+Value Srno (\S+)
+Value Encap (\S+)
+Value hwaddr (..:..:..:..:..:..)
+Value Inetaddr ([\d\.]+)
+Value inet6addr (\S+)
+Value Bcast ([\d\.]+)
+
+
+
+Start
+  ^${Srno}.*Link encap:${Encap}.*HWaddr ${hwaddr}
+  ^.*inet addr:${Inetaddr}.*Bcast:${Bcast}
+  ^.*inet6 addrr: ${inet6addr} -> Record
+
+

@@ -1,0 +1,8 @@
+Value platform (\S+)
+Value fqdm (.+)
+Value version (.+)
+
+
+
+Start
+  ^${platform}.* ${fqdm} ${version}[>#].* -> Record

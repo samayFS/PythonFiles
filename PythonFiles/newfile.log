@@ -1,0 +1,5 @@
+"2019-06-19 19:16:25,213 — toto — DEBUG — <module>:18 — debug"
+"2019-06-19 19:16:25,214 — toto — INFO — <module>:19 — info message"
+"2019-06-19 19:16:25,214 — toto — WARNING — <module>:20 — warning"
+"2019-06-19 19:16:25,214 — toto — ERROR — <module>:21 — error"
+"2019-06-19 19:16:25,214 — toto — CRITICAL — <module>:22 — critical"

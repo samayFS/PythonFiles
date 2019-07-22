@@ -1,0 +1,209 @@
+class Device(JsonSerializable, Persistable):
+
+    """
+
+    Device Base Class for storing Devices
+
+        """
+
+    # column_attribute_dict = {'_device_uid' : 'device_uid',
+
+    #                          '_site_id': 'site_id',
+
+    #                          '_organization': 'organization',
+
+    #                          '_serial_number': 'serial_number',
+
+    #                          '_phy_addr': 'phy_addr',
+
+    #                          '_ip_address': 'ip_address',
+
+    #                          '_ip_mask': 'ip_mask',
+
+    #                          '_ipv6_address': 'ipv6_address',
+
+    #                          '_fqdn': 'fqdn',
+
+    #                          '_domain': 'domain',
+
+    #                          '_hostname': 'hostname',
+
+    #                          '_vendor': 'vendor',
+
+    #                          '_model': 'model',
+
+    #                          '_version': 'version',
+
+    #                          '_platform': 'platform',
+
+    #                          '_platform_type': 'platform_type',
+
+    #                          'snmp_info': '_snmp_info',
+
+    #                          'ssh_info': '_ssh_info',
+
+    #                          'jump_info':'_jump_info',
+
+    #                          'api_info': '_api_info',
+
+    #                          'jump_server_info': '_jump_server_info',
+
+    #                          'jump_server_cred': '_jump_server_cred',
+
+    #                          'api_cred': '_api_cred',
+
+    #                          'telnet_info': '_telnet_info',
+
+    #                          'win_info':'_win_info',
+
+    #                          'snmp_cred':'_snmp_cred',
+
+    #                          'ssh_cred':'_ssh_cred',
+
+    #                          'telnet_cred':'_telnet_cred',
+
+    #                          'win_cred':'_win_cred',
+
+    #                          'app_props': '_app_props',
+
+    #                          '_device_type': 'device_type',
+
+    #                          '_device_subtype':'device_subtype',
+
+    #                          '_service_name': 'service_name',
+
+    #                          '_preferred_channel': 'preferred_channel',
+
+    #                          '_enable_password': 'enable_password',
+
+    #                          'enable_password_list':'_enable_password_list',
+
+    #                          '_device_role': 'device_role',
+
+    #                          '_device_family': 'device_family',
+
+    #                          '_is_virtual':'is_virtual',
+
+    #                          '_reachable_list': 'reachable_list',
+
+    #                          '_unreachable_list': 'unreachable_list',
+
+    #                          '_parents': 'parents',
+
+    #                          '_clusters': 'clusters'}
+
+    def __init__(self):
+
+        self.device_id = None
+
+        self.site_id = None
+
+        self.site_name = None
+
+        self.organization = None
+
+        self.organization_name = None
+
+        self.device_uid = None
+
+        self.sys_object_id = None
+
+        self.serial_number = None
+
+        self.phy_addr = None
+
+        self.phy_addr_list = []
+
+        self.sys_mac = None
+
+        self.instance_uuid = None
+
+        self.local_vm_name = None
+
+        self.available_ports = None
+
+        self.ip_address = None
+
+        self.ip_address_list = []
+
+        self.ip_mask = None
+
+        self.ipv6_address = None
+
+        self.fqdn = DEFAULT_FQDN
+
+        self.fqdn_list = []
+
+        self.hostname = None
+
+        self.domain = None
+
+        self.vendor = None
+
+        self.api_info = None
+
+        self.api_cred = None
+
+        self.jump_server_info = None
+
+        self.jump_server_cred = None
+
+        self.model = None
+
+        self.version = None
+
+        self.platform = None
+
+        self.platform_type = None
+
+        self.device_role = DEVICE_ROLES.UNKNOWN
+
+        self.device_family = None
+
+        self.service_name = []
+
+        self.snmp_info = None
+
+        self.ssh_info = None
+
+        self.telnet_info = None
+
+        self.win_info = None
+
+        self.app_props = None
+
+        self.snmp_cred = None
+
+        self.ssh_cred = None
+
+        self.telnet_cred = None
+
+        self.win_cred = None
+
+        self.device_type = DEVICE_TYPES.UNKNOWN
+
+        self.device_subtype = DEVICE_TYPES.UNKNOWN
+
+        self.preferred_channel = None
+
+        self.enable_password_list = None
+
+        self.enable_password = None
+
+        self.is_virtual = BOOLEAN.UNKNOWN
+
+        self.discovery_methods = []
+
+        self.reachable_list = []
+
+        self.unreachable_list = {}
+
+        self.curr_discovery_method = None
+
+        self.managers = {}
+
+        self.parents = []
+
+        self.parents_hostnames = []
+
+        self.farm = None

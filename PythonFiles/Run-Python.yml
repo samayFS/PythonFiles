@@ -1,0 +1,9 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  become: true
+  tasks:
+    - name: do
+      script: AnsibleHello.py
+      args:
+        executable: python3

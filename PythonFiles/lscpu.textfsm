@@ -1,0 +1,10 @@
+Value cputotal (\d)
+Value coresPerSocket (\d+)
+Value sockets (\d+)
+Value cpumhz (.*)
+
+Start
+  ^CPU\(s\):.* ${cputotal}
+  ^Core\(s\) per socket:.* ${coresPerSocket}
+  ^Socket\(s\):.* ${sockets}
+  ^CPU MHz:.* ${cpumhz} -> Record
