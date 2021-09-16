@@ -1,6 +1,5 @@
 import time
 import pika
-import os
 
 connection = pika.BlockingConnection(
     pika.ConnectionParameters(host='localhost'))
